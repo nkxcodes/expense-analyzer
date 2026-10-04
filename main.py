@@ -2,13 +2,18 @@
 def main():
     import pandas as pd
 
-    df = pd.read_csv('expense_analyzer/expense.csv')
+    df = pd.read_csv('expense.csv')
+
+    print()
+    print('========== EXPENSE ANALYZER ==========')
+    print()
 
     total_expense = df['amount'].sum()
     highest_expense = df['amount'].max()
     lowest_expense = df['amount'].min()
     average_expense = df['amount'].mean()
     category_expense = df.groupby('category')['amount'].sum()
+    highest_transaction = df[df['amount'] == df['amount'].max()]
 
     print(df)
 
@@ -26,6 +31,10 @@ def main():
 
     print()
     print(f'Category Max Expense: ₹{category_expense.max()}')
+
+    print()
+    print(f'Highest Transaction: ')
+    print(highest_transaction)
 
 if __name__ == "__main__":
     main()
