@@ -10,12 +10,15 @@ def main():
     average_expense = df['amount'].mean()
 
     print(df)
+    
+    print()
+    print('========== Analysis ==========')
 
     print()
-    print(f'Total Expenditure: {total_expense}')
-    print(f'Highest Expense: {highest_expense}')
-    print(f'Lowest Expense: {lowest_expense}')
-    print(f'Average Expense: {average_expense}')
+    print(f'Total Expenditure: ₹{total_expense}')
+    print(f'Highest Expense: ₹{highest_expense}')
+    print(f'Lowest Expense: ₹{lowest_expense}')
+    print(f'Average Expense: ₹{average_expense}')
 
 if __name__ == "__main__":
     main()
